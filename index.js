@@ -3,6 +3,12 @@
  */
 module.exports = (opts = {}) => {
   // Work with options here
+  const result = {};
+  const options = {
+    defaultDest: "critical.css",
+    css: postcss.root(),
+    ...opts
+  };
 
   return {
     postcssPlugin: 'postcss-critical-css-v2',
